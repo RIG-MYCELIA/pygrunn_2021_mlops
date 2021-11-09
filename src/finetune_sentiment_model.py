@@ -2,7 +2,7 @@ from data.grunn_dataset import create_extra_dataset
 from transformers import (AutoModelForSequenceClassification, Trainer,
                           TrainingArguments)
 
-model = AutoModelForSequenceClassification.from_pretrained("GroNLP/bert-base-dutch-cased")  # PyTorch
+model = AutoModelForSequenceClassification.from_pretrained("wietsedv/bert-base-dutch-cased-finetuned-sentiment")  # PyTorch
 train_dataset, val_dataset, _ = create_extra_dataset()
 
 training_args = TrainingArguments(

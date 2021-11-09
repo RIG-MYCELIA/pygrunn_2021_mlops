@@ -1,3 +1,6 @@
+import mlflow
+from transformers import pipeline
+
 # Wrapper class for the sentiment analysis task pipeline
 class SentimentAnalysis(mlflow.pyfunc.PythonModel):
     '''
@@ -6,7 +9,7 @@ class SentimentAnalysis(mlflow.pyfunc.PythonModel):
 
     def __init__(self, local_model_path=None):
         from transformers import (AutoModelForSequenceClassification,
-                                  AutoTokenizer, pipeline)
+                                  AutoTokenizer)
         huggingface_hub_model_name = "wietsedv/bert-base-dutch-cased-finetuned-sentiment"
 
         if local_model_path:

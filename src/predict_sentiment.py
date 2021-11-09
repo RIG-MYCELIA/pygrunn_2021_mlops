@@ -23,15 +23,16 @@ def predict_sentiment(mlflow_run_id, output_filename):
     res = loaded_model.predict(df_data)
     with open(output_filename, 'w') as f:
         f.write(json.dumps(res.to_json()))
+    print(res) # For DEMO purposes
 
 # TODO Step 2.B : rung prediction with the hugging face model
-predict_sentiment(mlflow_run_id='runs:/xxx/model',
-                  output_name='data/outputs_huggingface_grunn.json')
+predict_sentiment(mlflow_run_id='runs:/b1adc125a59d4cbeb7afc2baba3b2e1a/model',
+                  output_filename='data/outputs_huggingface_grunn.json')
 
-# TODO Step 4.C: run prediction with the new model
-predict_sentiment(mlflow_run_id='runs:/xxx/model',
-                  output_name='data/outputs_finetuned_grunn.json')
+# # TODO Step 4.C: run prediction with the new model
+# predict_sentiment(mlflow_run_id='runs:/xxx/model',
+#                   output_filename='data/outputs_finetuned_grunn.json')
 
-# TODO Step 6: run prediction with the new model on the old data
-predict_sentiment(mlflow_run_id='runs:/xxx/model',
-                  output_name='data/outputs_finetuned_grunn_old_data.json')
+# # TODO Step 6: run prediction with the new model on the old data
+# predict_sentiment(mlflow_run_id='runs:/xxx/model',
+#                   output_filename='data/outputs_finetuned_grunn_old_data.json')

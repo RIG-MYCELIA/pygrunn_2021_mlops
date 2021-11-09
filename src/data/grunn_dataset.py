@@ -18,7 +18,7 @@ class GrunnOpenDataset(torch.utils.data.Dataset):
         return len(self.labels)
 
 def create_extra_dataset():
-    tokenizer = AutoTokenizer.from_pretrained('GroNLP/bert-base-dutch-cased')
+    tokenizer = AutoTokenizer.from_pretrained('wietsedv/bert-base-dutch-cased-finetuned-sentiment')
 
     filename_texts = 'data/extra_data_grunn_features.json'
     with open(filename_texts, 'r') as f:
