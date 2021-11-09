@@ -17,21 +17,6 @@ class GrunnOpenDataset(torch.utils.data.Dataset):
     def __len__(self):
         return len(self.labels)
 
-
-def add_extra_feature_to_tracked_dataset():
-    filename_source_dataset = 'data/data_grunn.json'
-    with open(filename_source_dataset, 'r') as f:
-        source_dataset = json.loads(f.read())
-
-    filename_extra_dataset = 'data/extra_data_grunn_features.json'
-    with open(filename_extra_dataset, 'r') as f:
-        extra_dataset = json.loads(f.read())
-    
-    new_dataset = source_dataset + extra_dataset
-    with open(filename_source_dataset, 'w') as f:
-        f.write(json.dumps(new_dataset))
-
-
 def create_extra_dataset():
     tokenizer = AutoTokenizer.from_pretrained('GroNLP/bert-base-dutch-cased')
 

@@ -23,4 +23,19 @@ with open('data/extra_data_grunn_features.json', 'w') as fp:
 with open('data/extra_data_grunn_labels.json', 'w') as fp:
     json.dump(labels, fp)
 
+def add_extra_feature_to_tracked_dataset():
+    filename_source_dataset = 'data/data_text_only_grunn.json'
+    with open(filename_source_dataset, 'r') as f:
+        source_dataset = json.loads(f.read())
+
+    filename_extra_dataset = 'data/extra_data_grunn_features.json'
+    with open(filename_extra_dataset, 'r') as f:
+        extra_dataset = json.loads(f.read())
+    
+    new_dataset = extra_dataset + source_dataset
+    with open(filename_source_dataset, 'w') as f:
+        f.write(json.dumps(new_dataset))
+
+add_extra_feature_to_tracked_dataset()
+
 # TODO Step 3.A: Manually add new features & labels to fine tune the model

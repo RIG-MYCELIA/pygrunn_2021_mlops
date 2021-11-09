@@ -1,10 +1,3 @@
-import mlflow
-from transformers import (AutoModelForSequenceClassification, AutoTokenizer,
-                          pipeline)
-
-tokenizer = AutoTokenizer.from_pretrained("wietsedv/bert-base-dutch-cased-finetuned-sentiment")
-model = AutoModelForSequenceClassification.from_pretrained("wietsedv/bert-base-dutch-cased-finetuned-sentiment")
-
 # Wrapper class for the sentiment analysis task pipeline
 class SentimentAnalysis(mlflow.pyfunc.PythonModel):
     '''
