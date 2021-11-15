@@ -1,5 +1,5 @@
 # pygrunn_2021_mlops
-Live demo about the usage of MLflow &amp; DVC for the talk at Pygrunn Groningen '21. In this talk Bertje (Dutch Transformer model created by Groningen University) will be applied to an open dataset of the City Groningen. This [dataset](https://ckan.dataplatform.nl/dataset/mor-slim-melden-groningen/resource/edc8db66-8dc3-4819-9935-e6c8f55388ab) contains the remarks from citizens about the public spaces in the city, and is a goldmine about what people really think about the city. 
+Demo and in the future a workshop about the usage of MLflow &amp; DVC for the talk at Pygrunn Groningen '21. In this talk Bertje (Dutch Transformer model created by Groningen University) will be applied to an open dataset of the City Groningen. This [dataset](https://ckan.dataplatform.nl/dataset/mor-slim-melden-groningen/resource/edc8db66-8dc3-4819-9935-e6c8f55388ab) contains the remarks from citizens about the public spaces in the city, and is a goldmine about what people really think about the city. 
 
 0. pip install the requirements.txt in a virtual environment :) -> this has been tested on Windows 11 (sorry for not dockerizing this demo :( ). 
 
